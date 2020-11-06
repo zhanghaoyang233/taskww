@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv1</title>
+</head>
+
+<body>
+    <script>
+        /*------------------- str实现字符串的转化---------------------------------*/
+        let str = "can-enter-volunteer-organization";
+
+        function change(val) {
+            var arr = val.split('-');
+            for (var i = 1; i < arr.length; i++) {
+                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+            }
+            return arr.join('');
+        }
+        //字符串转化成数组：.split()方法
+        //数组转化成字符串：.join()方法
+        newArr = change(str);
+        /*--------------------------arr实现字符串的转化-----------------------------------------------*/
+        console.log(newArr);
+        let arr = ["myfirstactivity", "today activity", "yourActivity", "activitys"];
+        var arr1 = arr.join("-");
+        arr1 = arr1.replace(/\s*/g, "");
+        newArr1 = change(arr1);
+        console.log(newArr1);
+    </script>
+</body>
+
+</html>
